@@ -640,20 +640,20 @@ $ cd my-project
 
 <p>我们看一下已经创建的初始化项目：</p>
 <p>有一个配置文件 mkdocs.yml, 和一个包含文档源码的 docs 文件夹。在 docs 文件夹里包含了一个名为 index.md 的文档。</p>
-<p><img alt="The initial MkDocs layout" src="../img/initial_layout.png" /></p>
+<p><img alt="initial_layout" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/initial_layout.png" /></p>
 <p>MkDocs 包含了一个内建的服务器以预览当前文档。控制台切换当前目录到 mkdocs.yml 配置文件相同文件夹, 输入 mkdocs serve 命令以启动内建服务器：</p>
 <pre><code>$ mkdocs serve
 Running at: http://127.0.0.1:8000/
 </code></pre>
 
 <p>在浏览器上输入http://127.0.0.1:8000/,你将看到以下页面：</p>
-<p><img alt="initial_page" src="../img/initial_page.png" /></p>
+<p><img alt="initial_page" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/initial_page.png" /></p>
 <p>内建服务器支持在配置文件、文档目录或主题发生改变时<strong>自动载入并重新生成文档</strong>，也就是说，内建服务器启动后，会一直跟踪项目文档的变化，当你修改了文档后，在网页上可以实时看得到，图示可见内建服务器一直在跟踪文档变化并不断输出信息：</p>
-<p><img alt="image-20200811171737419" src="../img/image_trace.png" /></p>
+<p><img alt="image_trace" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_trace.png" /></p>
 <p>现在可以开始编辑配置文件 mkdocs.yml 了，把 site_name 改成其他内容并保存文档：</p>
-<p><img alt="Editing the config file" src="../img/initial-config.png" /></p>
+<p><img alt="initial-config" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/initial-config.png" /></p>
 <p>刷新浏览器你将看到网页标题已发生改变：</p>
-<p><img alt="The site_name setting" src="../img/site-name.png" /></p>
+<p><img alt="site-name" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/site-name.png" /></p>
 <h3 id="4">4.添加页面</h3>
 <p>编辑 doc/index.md 文档, 将默认标题改为 MkLorum, 刷新浏览器即可看到标题变化。</p>
 <p>要为文档添加导航条, 只需在配置文件中添加导航条需要的标题和排序即可：</p>
@@ -674,7 +674,7 @@ theme: readthedocs
 </code></pre>
 
 <p>刷新浏览器即可看到 ReadTheDocs 主题已被应用。</p>
-<p><img alt="Screenshot" src="../img/readthedocs.png" /></p>
+<p><img alt="readthedocs" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/readthedocs.png" /></p>
 <p>mkdocs安装后仅内置两种主题，<em>mkdocs</em>和<em>readthedocs</em>，如果需要使用其它主题，需要先通过pip进行安装。</p>
 <h3 id="6">6.站点生成</h3>
 <p>我们现在已经可以发布 MkLorum 文档了，通过以下命令生成文档：</p>
@@ -685,18 +685,18 @@ theme: readthedocs
 <h3 id="7github-page">7.部署到Github Page</h3>
 <h4 id="step-1">Step 1 创建新仓库</h4>
 <p>登录 <a href="https://github.com/">GitHub</a>，在右上角选择 New repository，创建新仓库。</p>
-<p><img alt="new_repo.png" src="../img/1214049050.png" /></p>
+<p><img alt="创建新仓库" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E5%88%9B%E5%BB%BA%E6%96%B0%E4%BB%93%E5%BA%93.png" /></p>
 <h4 id="step-2">Step 2 配置仓库信息</h4>
 <p>在仓库设置页面，<strong>Repository_name</strong>设置成 <strong>xxxx</strong>.github.io，其中 <strong>xxxx</strong> 是你 GitHub 的用户名(注意，必须和用户名一致)。
 选择 <strong>Public</strong> ，点击 <strong>Create repository</strong>。</p>
-<p><img alt="repo_set.png" src="../img/2496571209.png" /></p>
+<p><img alt="配置仓库信息" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AE%E4%BB%93%E5%BA%93%E4%BF%A1%E6%81%AF.png" /></p>
 <h4 id="step-3">Step 3 上传网页资源到仓库</h4>
 <p>将生成的site文件夹里的所有文件上传到刚刚创建的仓库中（使用 Git 相关命令或直接使用 GitHub Desktop 软件进行操作，这里不再叙述）。</p>
-<p><img alt="upload.png" src="../img/2271651650.png" /></p>
+<p><img alt="上传网页资源到仓库" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E4%B8%8A%E4%BC%A0%E7%BD%91%E9%A1%B5%E8%B5%84%E6%BA%90%E5%88%B0%E4%BB%93%E5%BA%93.png" /></p>
 <h4 id="step-4-github-pages">Step 4 部署到 GitHub Pages</h4>
 <p>打开仓库，点击仓库功能栏的 <strong>Setting</strong>，进入到仓库设置页面。
 在设置页面找到 <strong>GitHub Pages</strong> 部分，在 <strong>Source</strong> 这里选择 <strong>master branch</strong>。</p>
-<p><img alt="pages.png" src="../img/3204007861.png" /></p>
+<p><img alt="部署到 GitHub Pages" src="../img/mkdocs%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/%E9%83%A8%E7%BD%B2%E5%88%B0%20GitHub%20Pages.png" /></p>
 <p>部署成功后，便可以通过 <strong>xxxx.github.io</strong> 来访问你的网页（<em>不过现在需要翻墙才能访问</em>）。</p>
 <h3 id="8material">8.安装Material主题（待更新）</h3>
                 

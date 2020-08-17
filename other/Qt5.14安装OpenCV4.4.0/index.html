@@ -639,32 +639,33 @@
 <h4 id="1qt142">（1）下载并安装Qt14.2</h4>
 <p>下载地址：http://download.qt.io/archive/qt/5.14/5.14.2/</p>
 <p>文件名：qt-opensource-windows-x86-5.14.2.exe</p>
-<p><img alt="qt_download" src="../img/qt_download.png" /></p>
+<p><img alt="qt_download" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/qt_download.png" /></p>
 <p>安装的时候选择MinGW编译器：</p>
-<p><img alt="install_qt1" src="../img/install_qt1.png" /><img alt="install_qt2" src="../img/install_qt2.png" /></p>
+<p><img alt="install_qt1" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/install_qt1.png" /></p>
+<p><img alt="install_qt2" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/install_qt2.png" /></p>
 <p>安装完成后，<code>将Qt安装目录下Qt5.14.2/Tools/mingw730_64/bin添加到Path中</code>，如我的是这样：D:\Qt\Qt5.14.2\Tools\mingw730_64\bin</p>
 <h4 id="2cmake">（2）下载并安装cmake</h4>
 <p>下载地址： https://cmake.org/download/</p>
 <p>文件名：cmake-3.18.1-win64-x64.msi</p>
-<p><img alt="1597303431(1)" src="../img/1597303431%281%29.jpg" /></p>
+<p><img alt="1597303431" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597303431.jpg" /></p>
 <p>安装过程中有个选项是<code>把路径添加到所有用户的Path</code>的，要勾选上，还有一个是<code>生成桌面icon</code>的，也选上。</p>
 <h4 id="3opencv">（3）下载opencv</h4>
 <p>下载地址：https://opencv.org/releases/</p>
 <p>文件名：opencv-4.4.0-vc14_vc15.exe</p>
-<p><img alt="download_opencv4.4" src="../img/download_opencv4.4.png" /></p>
+<p><img alt="download_opencv4.4" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/download_opencv4.4.png" /></p>
 <p>下载后双击进行源文件的提取，可以放置某个文件夹里，最好命名下OpenCV-4.4.0，里面有一个source文件夹和一个build文件夹，如果是用VS2015，那么build/x64/vc14中的库就可以直接用，不需要再去编译，如果用的是MinGW，则用不了，需要重新编译。</p>
 <h3 id="3opencv_1">3.编译opencv</h3>
 <h4 id="1configure">（1）第一次Configure</h4>
 <p>build文件可以自己建一个，最后用来存放编译结果的，记住这个build文件</p>
-<p><img alt="1597305143(1)" src="../img/1597305143%281%29.jpg" /></p>
+<p><img alt="1597305143" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597305143.jpg" /></p>
 <p>上面的填好后，左下边点击Configure，然后选择使用MinGW进行编译：</p>
-<p><img alt="1597305324(1)" src="../img/1597305324%281%29.jpg" /></p>
+<p><img alt="1597305324" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597305324.jpg" /></p>
 <p>选择C和C++编译器，这两个编译器在前面安装Qt后添加到Path环境变量里的bin文件夹里，如我的是：D:\Qt\Qt5.14.2\Tools\mingw730_64\bin\</p>
-<p><img alt="1597305430(1)" src="../img/1597305430%281%29.jpg" /></p>
+<p><img alt="1597305430" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597305430.jpg" /></p>
 <h4 id="2configure">（2）第二次Configure</h4>
 <p>点击Finish后会执行第一次配置，第一次Configure完成后进行一些相关的设置：</p>
-<p><img alt="1597331402(1)" src="../img/1597331402%281%29.jpg" /></p>
-<p><img alt="1597331491(1)" src="../img/1597331491%281%29.jpg" /></p>
+<p><img alt="1597331402" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597331402.jpg" /></p>
+<p><img alt="1597331491" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597331491.jpg" /></p>
 <p>不一一截图了，列出在这里：</p>
 <ul>
 <li>
@@ -693,34 +694,33 @@
 </li>
 </ul>
 <p>第二次点击Configure：然后修改一下Qt5_DIR的Value：</p>
-<p><img alt="1597331654(1)" src="../img/1597331654%281%29.jpg" /></p>
+<p><img alt="1597331654" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597331654.jpg" /></p>
 <p>如我的：D:\Qt\Qt5.14.2\5.14.2\mingw73_64\lib\cmake\Qt5</p>
-<p><img alt="1597331744(1)" src="../img/1597331744%281%29.jpg" /></p>
-<p><img alt="1597332441(1)" src="../img/1597332441%281%29.jpg" /></p>
+<p><img alt="1597331744" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597331744.jpg" /></p>
+<p><img alt="1597332441" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597332441.jpg" /></p>
 <h4 id="3generate">（3）Generate</h4>
 <p>第二次Configure完成后，左下角点击Generate:</p>
-<p><img alt="1597332484(1)" src="../img/1597332484%281%29.jpg" /></p>
+<p><img alt="1597332484" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597332484.jpg" /></p>
 <h4 id="4mingw32-make-j">（4）mingw32-make -j (线程数量)</h4>
 <p>打开PowerShell，进入刚刚的build文件，使用命令：</p>
 <pre><code>mingw32-make.exe -j (线程数量)  
 </code></pre>
 
 <p>（线程数量根据自己电脑cpu性能酌情填写。4核CPU就填4，8核就填8，以此类推，例如我是4核心的就填“mingw32-make.exe -j 4”即可）</p>
-<p><img alt="1597332750(1)" src="../img/1597332750%281%29.jpg" /></p>
-<p><img alt="1597332788(1)" src="../img/1597332788%281%29.jpg" /></p>
-<p><img alt="1597501169(1)" src="../img/1597501169%281%29.jpg" /></p>
+<p><img alt="1597334806(1)" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597334806.jpg" /></p>
+<p><img alt="1597501169" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597501169.jpg" /></p>
 <p>make完成后，输入一下命令进行安装：</p>
 <h4 id="5mingw32-makeexe-install">（5）mingw32-make.exe install</h4>
 <pre><code>mingw32-make.exe install
 </code></pre>
 
 <p>这步比较快，install完成后，整个编译工作就完成了：</p>
-<p><img alt="1597501293(1)" src="../img/1597501293%281%29.jpg" /></p>
+<p><img alt="1597501293" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597501293.jpg" /></p>
 <h4 id="6install">（6）install文件夹</h4>
 <p>可以看到build文件中有一个install文件夹：</p>
-<p><img alt="1597501429(1)" src="../img/1597501429%281%29.png" /></p>
+<p><img alt="1597501429" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597501429.png" /></p>
 <p>进入install文件夹：</p>
-<p><img alt="1597501504(1)" src="../img/1597501504%281%29.png" /></p>
+<p><img alt="1597501504" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597501504.png" /></p>
 <ul>
 <li>
 <p>include里面是头文件</p>
@@ -734,18 +734,18 @@
 </ul>
 <h3 id="4qtopencv">4.Qt调用OpenCV库</h3>
 <p>新建一个Qt工程，右键点击工程，选择添加库：</p>
-<p><img alt="1597502101(1)" src="../img/1597502101%281%29.png" /></p>
+<p><img alt="1597502101" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597502101.png" /></p>
 <p>选择添加外部库：</p>
-<p><img alt="1597502258(1)" src="../img/1597502258%281%29.png" /></p>
-<p><img alt="1597502408(1)" src="../img/1597502408%281%29.jpg" /></p>
+<p><img alt="1597502258" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597502258.png" /></p>
+<p><img alt="1597502408" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597502408.jpg" /></p>
 <p>库文件：install/x64/mingw/lib/libopencv_world440.dll.a</p>
 <p>包含路径：install/include</p>
 <p>在main.cpp文件中添加头文件和一些代码测试OpenCV是否安装完成</p>
-<p><img alt="1597505107(1)" src="../img/1597505107%281%29.jpg" /></p>
+<p><img alt="1597505107" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597505107.jpg" /></p>
 <p>选择release构建方式，由于MinGW默认使用release方式进行编译，所以上边编译出来的是release版本的库，只能用于release方式</p>
-<p><img alt="1597502698(1)" src="../img/1597502698%281%29.jpg" /></p>
+<p><img alt="1597502698" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597502698.jpg" /></p>
 <p>安装完成！！！</p>
-<p><img alt="1597505058(1)" src="../img/1597505058%281%29.jpg" /></p>
+<p><img alt="1597505058" src="../img/Qt5.14%E5%AE%89%E8%A3%85OpenCV4.4.0/1597505058.jpg" /></p>
                 
               
               
